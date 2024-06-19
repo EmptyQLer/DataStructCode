@@ -134,7 +134,7 @@ typedef struct ThreadBiNode {
 
 void InOrderThread(ThreadBiTree &T,ThreadBiNode* &pre){         //T为当前结点（这里是术，但后续遍历看做当前结点） ，pre是T的前驱结点
     //如何线索化：当前结点无左孩子 则将左孩子指针指向当前结点的前驱结点，并更新左线索值(创建左线索)         当前结点无右孩子 则将右孩子指针指向当前结点的后继结点，并更新右线索值（创建右线索）
-    if (T) return;    //空树，直接返回
+    if (T == NULL) return;    //空树，直接返回
 
     InOrderThread(T->lchild,pre);
 
